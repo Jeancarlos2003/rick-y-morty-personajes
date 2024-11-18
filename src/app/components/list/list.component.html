@@ -1,0 +1,15 @@
+<div class="character-grid">
+  <app-card
+    *ngFor="let character of characters"
+    [character]="character"
+    (click)="openDetails(character.id)"
+  ></app-card>
+</div>
+
+
+<div class="pagination-controls">
+  <button mat-button (click)="changePage(false)" [disabled]="page === 1">
+    Anterior
+  </button>
+  <button mat-button (click)="changePage(true)">Siguiente</button>
+</div>
